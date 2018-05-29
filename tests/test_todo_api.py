@@ -17,7 +17,7 @@ class TodoTestCase(unittest.TestCase):
 		self.assertEqual(res.status_code, 200)
 		self.assertIn("tasks", str(res.data))
 
-	def test_api_to_get_single_data_item(self):
+	def test_api_can_get_a_single_data_item(self):
 		# Test API to get single data using id
 		res = self.client().get("/todo/api/v1.0/tasks/{}".format(2))
 		self.assertEqual(res.status_code, 200)
